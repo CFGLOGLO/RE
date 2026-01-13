@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -18,14 +20,32 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes heartFloat {
-            0% { transform: translateY(0) scale(1); opacity: 0.7; }
-            50% { transform: translateY(-20px) scale(1.1); opacity: 0.9; }
-            100% { transform: translateY(-40px) scale(0.8); opacity: 0; }
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.1);
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateY(-40px) scale(0.8);
+                opacity: 0;
+            }
         }
 
         .heart-float {
@@ -45,26 +65,34 @@
         }
     </style>
 </head>
+
 <body class="overflow-hidden h-screen bg-gradient-to-br from-yellow-200 via-orange-300 to-pink-400">
     <div class="relative w-full h-screen flex items-center justify-center">
         <div class="relative w-full h-full flex items-center justify-center">
             <!-- Slide 1: Mensaje de la Comunidad -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-100 pointer-events-auto" id="slide-0">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-3xl text-center shadow-2xl relative overflow-hidden">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-100 pointer-events-auto"
+                id="slide-0">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-3xl text-center shadow-2xl relative overflow-hidden">
                     <!-- Iconos flotantes decorativos -->
                     <div class="absolute top-6 left-8 text-4xl animate-bounce" style="animation-delay: 0s;">💌</div>
-                    <div class="absolute top-12 right-12 text-3xl animate-bounce" style="animation-delay: 0.3s;">💖</div>
-                    <div class="absolute bottom-10 left-12 text-3xl animate-bounce" style="animation-delay: 0.6s;">✨</div>
-                    <div class="absolute bottom-8 right-8 text-4xl animate-bounce" style="animation-delay: 0.9s;">🌟</div>
+                    <div class="absolute top-12 right-12 text-3xl animate-bounce" style="animation-delay: 0.3s;">💖
+                    </div>
+                    <div class="absolute bottom-10 left-12 text-3xl animate-bounce" style="animation-delay: 0.6s;">✨
+                    </div>
+                    <div class="absolute bottom-8 right-8 text-4xl animate-bounce" style="animation-delay: 0.9s;">🌟
+                    </div>
                     <div class="absolute top-1/2 left-4 text-2xl animate-pulse">🎈</div>
                     <div class="absolute top-1/3 right-6 text-2xl animate-pulse" style="animation-delay: 0.5s;">🎉</div>
                     <div class="absolute bottom-1/3 left-6 text-2xl animate-pulse" style="animation-delay: 1s;">💝</div>
-                    
+
                     <!-- Corazones flotantes -->
                     <div class="heart-float absolute top-20 left-1/4 text-pink-400 text-xl opacity-70">❤️</div>
-                    <div class="heart-float absolute top-32 right-1/4 text-pink-400 text-xl opacity-70" style="animation-delay: 1s;"></div>
-                    <div class="heart-float absolute bottom-24 left-1/3 text-pink-400 text-xl opacity-70" style="animation-delay: 2s;"></div>
-                    
+                    <div class="heart-float absolute top-32 right-1/4 text-pink-400 text-xl opacity-70"
+                        style="animation-delay: 1s;"></div>
+                    <div class="heart-float absolute bottom-24 left-1/3 text-pink-400 text-xl opacity-70"
+                        style="animation-delay: 2s;"></div>
+
                     <!-- Contenido principal con z-index mayor -->
                     <div class="relative z-10">
                         <div class="mb-6 text-6xl animate-pulse">💬</div>
@@ -81,80 +109,100 @@
             </div>
 
             <!-- Slide 2: Mensaje de agradecimiento -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-1">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-4xl text-center shadow-2xl relative">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-1">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-4xl text-center shadow-2xl relative">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-8 left-10 text-3xl animate-pulse">📸</div>
                     <div class="absolute top-10 right-10 text-3xl animate-pulse" style="animation-delay: 0.5s;">✨</div>
                     <div class="absolute bottom-10 left-12 text-2xl animate-bounce">💝</div>
-                    <div class="absolute bottom-8 right-12 text-2xl animate-bounce" style="animation-delay: 0.3s;">🎁</div>
-                    
+                    <div class="absolute bottom-8 right-12 text-2xl animate-bounce" style="animation-delay: 0.3s;">🎁
+                    </div>
+
                     <div class="relative z-10">
                         <div class="mb-6 text-5xl">🎉</div>
                         <h1 class="text-red-500 text-4xl mb-8 font-bold drop-shadow-sm">Un Regalo para ustedes</h1>
-                        
+
                         <div class="bg-white/60 rounded-2xl p-8 mb-6 backdrop-blur-sm shadow-inner">
                             <p class="text-gray-700 text-xl leading-relaxed mb-4">
-                                Esta iniciativa fue de <span class="font-bold text-pink-600">APG</span> y el grupo de ediciones de fotos. 📸
+                                Esta iniciativa fue de <span class="font-bold text-pink-600">APG</span> y el grupo de
+                                ediciones de fotos. 📸
                             </p>
                             <p class="text-gray-700 text-xl leading-relaxed mb-4">
-                                 Agradecimiento para los grupos que apoyaron con esta iniciativa:
+                                Agradecimiento para los grupos que apoyaron con esta iniciativa:
                             </p>
                             <div class="flex flex-wrap justify-center gap-3 mb-4 text-lg">
-                                <span class="bg-pink-200 px-4 py-2 rounded-full font-semibold text-pink-700 flex items-center gap-2">
-                                    <img src="https://cdn.discordapp.com/icons/1443062382246236223/a653df25b2d8551314a654e6aa2a319b.webp?size=80&quality=lossless" alt="Ganga Chill" class="w-6 h-6 rounded-full">
-                                     La Ganga chill
+                                <span
+                                    class="bg-pink-200 px-4 py-2 rounded-full font-semibold text-pink-700 flex items-center gap-2">
+                                    <img src="https://cdn.discordapp.com/icons/1443062382246236223/a653df25b2d8551314a654e6aa2a319b.webp?size=80&quality=lossless"
+                                        alt="Ganga Chill" class="w-6 h-6 rounded-full">
+                                    La Ganga chill
                                 </span>
-                                <span class="bg-orange-200 px-4 py-2 rounded-full font-semibold text-orange-700 flex items-center gap-2">
-                                    <img src="https://cdn.discordapp.com/icons/1438348800564396064/4e8ef466b8138a3d8a666aefb15050ed.webp?size=80&quality=lossless" alt="PHOENIX" class="w-6 h-6 rounded-full">
-                                     PHOENIX
+                                <span
+                                    class="bg-orange-200 px-4 py-2 rounded-full font-semibold text-orange-700 flex items-center gap-2">
+                                    <img src="https://cdn.discordapp.com/icons/1438348800564396064/4e8ef466b8138a3d8a666aefb15050ed.webp?size=80&quality=lossless"
+                                        alt="PHOENIX" class="w-6 h-6 rounded-full">
+                                    PHOENIX
                                 </span>
-                                <span class="bg-green-200 px-4 py-2 rounded-full font-semibold text-green-700 flex items-center gap-2">
-                                    <img src="https://cdn.discordapp.com/icons/1310329271142842388/3b6975f1e5340aee9ca81af32fa0ab3f.webp?size=80&quality=lossless" alt="La Glogloarmy" class="w-6 h-6 rounded-full">
-                                     La Glogloarmy
+                                <span
+                                    class="bg-green-200 px-4 py-2 rounded-full font-semibold text-green-700 flex items-center gap-2">
+                                    <img src="https://cdn.discordapp.com/icons/1310329271142842388/3b6975f1e5340aee9ca81af32fa0ab3f.webp?size=80&quality=lossless"
+                                        alt="La Glogloarmy" class="w-6 h-6 rounded-full">
+                                    La Glogloarmy
                                 </span>
-                                <span class="bg-purple-200 px-4 py-2 rounded-full font-semibold text-purple-700 flex items-center gap-2">
-                                    <img src="https://i.pinimg.com/474x/3b/dc/aa/3bdcaa6c344149a4e95c8338b8c3b5b3.jpg" alt="Las Chicas Superpoderosas" class="w-6 h-6 rounded-full">
-                                     Las Gloglocitas
+                                <span
+                                    class="bg-purple-200 px-4 py-2 rounded-full font-semibold text-purple-700 flex items-center gap-2">
+                                    <img src="https://i.pinimg.com/474x/3b/dc/aa/3bdcaa6c344149a4e95c8338b8c3b5b3.jpg"
+                                        alt="Las Chicas Superpoderosas" class="w-6 h-6 rounded-full">
+                                    Las Gloglocitas
                                 </span>
                             </div>
                             <p class="text-gray-700 text-xl leading-relaxed mb-3">
-                                Se hizo este pequeño regalo y mensajes de <span class="font-bold text-purple-600">un día para otro</span>, 
+                                Se hizo este pequeño regalo y mensajes de <span class="font-bold text-purple-600">un día
+                                    para otro</span>,
                                 por eso son pocos mensajes. 🌟
                             </p>
                             <p class="text-gray-600 text-lg leading-relaxed italic">
-                                Para q los chicos apoyen hicimos la dinamica q pueden bajar pepita con sus mensajes y fotos pero claro guardando respeto; asi que no se amargen con ellos.
+                                Para q los chicos apoyen hicimos la dinamica q pueden bajar pepita con sus mensajes y
+                                fotos pero claro guardando respeto; asi que no se amargen con ellos.
                             </p>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 3 - Mensaje Especial -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-2">
-                <div class="card-animate bg-gradient-to-br from-pink-100/95 to-purple-100/95 backdrop-blur-lg rounded-3xl px-16 py-12 max-w-3xl shadow-2xl relative overflow-hidden">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-2">
+                <div
+                    class="card-animate bg-gradient-to-br from-pink-100/95 to-purple-100/95 backdrop-blur-lg rounded-3xl px-16 py-12 max-w-3xl shadow-2xl relative overflow-hidden">
                     <!-- Iconos decorativos flotantes -->
                     <div class="absolute top-8 right-10 text-4xl animate-pulse">🙏</div>
                     <div class="absolute top-12 left-10 text-3xl animate-bounce">💕</div>
-                    <div class="absolute bottom-10 right-12 text-3xl animate-pulse" style="animation-delay: 0.5s;">✨</div>
-                    <div class="absolute bottom-8 left-8 text-3xl animate-bounce" style="animation-delay: 0.3s;">💖</div>
-                    
+                    <div class="absolute bottom-10 right-12 text-3xl animate-pulse" style="animation-delay: 0.5s;">✨
+                    </div>
+                    <div class="absolute bottom-8 left-8 text-3xl animate-bounce" style="animation-delay: 0.3s;">💖
+                    </div>
+
                     <!-- Corazones flotantes sutiles -->
                     <div class="heart-float absolute top-20 left-1/4 text-pink-300 text-2xl opacity-60">❤️</div>
-                    <div class="heart-float absolute top-28 right-1/3 text-purple-300 text-2xl opacity-60" style="animation-delay: 1.5s;">💜</div>
-                    
+                    <div class="heart-float absolute top-28 right-1/3 text-purple-300 text-2xl opacity-60"
+                        style="animation-delay: 1.5s;">💜</div>
+
                     <div class="relative z-10 text-center">
                         <div class="mb-6 text-5xl">💐</div>
                         <h2 class="text-purple-700 text-3xl mb-8 font-bold drop-shadow-sm">Un Mensaje del Corazón</h2>
-                        
+
                         <div class="bg-white/70 rounded-2xl p-8 backdrop-blur-sm shadow-inner">
                             <p class="text-gray-800 text-xl leading-relaxed mb-4 font-medium">
-                                Estamos rezando para que tu mamita se encuentre bien. 
+                                Estamos rezando para que tu mamita se encuentre bien.
                             </p>
                             <p class="text-gray-700 text-lg leading-relaxed mb-5">
-                                Deseamos de todo corazón lo mejor para tu mamita Gloglo y para la mamita de Emi. 
-                                <span class="font-semibold text-pink-600">Estamos rezando</span> para que todo salga bien y que la recuperación sea pronta. 💜
+                                Deseamos de todo corazón lo mejor para tu mamita Gloglo y para la mamita de Emi.
+                                <span class="font-semibold text-pink-600">Estamos rezando</span> para que todo salga
+                                bien y que la recuperación sea pronta. 💜
                             </p>
                             <div class="flex justify-center gap-3 text-3xl mt-6">
                                 <span class="animate-bounce" style="animation-delay: 0.1s;">🙏</span>
@@ -167,51 +215,64 @@
             </div>
 
             <!-- Slide 4 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-3">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-3">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💝</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-pink-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de User_20</h2>
-                        
+                        <h2 class="text-pink-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de User_20
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
-                            <div class="flex-1 bg-gradient-to-br from-white/80 to-pink-50/60 rounded-2xl p-8 backdrop-blur-sm shadow-inner text-left border-2 border-pink-200/40">
+                            <div
+                                class="flex-1 bg-gradient-to-br from-white/80 to-pink-50/60 rounded-2xl p-8 backdrop-blur-sm shadow-inner text-left border-2 border-pink-200/40">
                                 <!-- Párrafo de agradecimiento con icono -->
                                 <div class="mb-6 relative">
                                     <div class="absolute -left-2 top-0 text-2xl">💝</div>
                                     <p class="text-gray-800 text-lg leading-relaxed pl-8 font-medium">
-                                        Quiero expresarles mi <span class="text-pink-600 font-semibold">más sincero agradecimiento</span> por todo el contenido, la energía y la dedicación que comparten en cada stream.
+                                        Quiero expresarles mi <span class="text-pink-600 font-semibold">más sincero
+                                            agradecimiento</span> por todo el contenido, la energía y la dedicación que
+                                        comparten en cada stream.
                                     </p>
                                 </div>
-                                
+
                                 <!-- Puntos destacados con iconos -->
                                 <div class="bg-white/50 rounded-xl p-5 mb-5 space-y-3">
                                     <div class="flex items-start gap-3">
                                         <span class="text-xl flex-shrink-0 mt-1">🎮</span>
                                         <p class="text-gray-700 text-base leading-relaxed">
-                                            Su trabajo <span class="font-semibold text-purple-600">no solo entretiene</span>, sino que también acompaña y anima.
+                                            Su trabajo <span class="font-semibold text-purple-600">no solo
+                                                entretiene</span>, sino que también acompaña y anima.
                                         </p>
                                     </div>
                                     <div class="flex items-start gap-3">
                                         <span class="text-xl flex-shrink-0 mt-1">✨</span>
                                         <p class="text-gray-700 text-base leading-relaxed">
-                                            Crean un espacio donde muchas personas podemos <span class="font-semibold text-blue-600">desconectarnos de la rutina</span> y pasar un buen momento.
+                                            Crean un espacio donde muchas personas podemos <span
+                                                class="font-semibold text-blue-600">desconectarnos de la rutina</span> y
+                                            pasar un buen momento.
                                         </p>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Mensaje de buenos deseos -->
                                 <div class="mb-5">
                                     <p class="text-gray-800 text-base leading-relaxed">
-                                        <span class="text-xl mr-2">🌟</span>Les deseo <span class="font-semibold text-orange-600">muchos éxitos</span> en todos sus proyectos presentes y futuros. Espero que sigan <span class="font-semibold text-green-600">creciendo y disfrutando</span> de este camino tanto como nosotros disfrutamos acompañándolos.
+                                        <span class="text-xl mr-2">🌟</span>Les deseo <span
+                                            class="font-semibold text-orange-600">muchos éxitos</span> en todos sus
+                                        proyectos presentes y futuros. Espero que sigan <span
+                                            class="font-semibold text-green-600">creciendo y disfrutando</span> de este
+                                        camino tanto como nosotros disfrutamos acompañándolos.
                                     </p>
                                 </div>
-                                
+
                                 <!-- Posdata con estilo especial -->
                                 <div class="mt-6 pt-4 border-t-2 border-pink-200/50">
                                     <p class="text-gray-600 text-sm italic flex items-center gap-2">
@@ -220,28 +281,32 @@
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img\s\1.webp" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto hover:scale-105 transition-transform duration-300">
+                                <img src="img\s\1.webp"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto hover:scale-105 transition-transform duration-300">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 5 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-4">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-4">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🎉</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💬</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">✉️</div>
-                        <h2 class="text-orange-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Wstein196</h2>
-                        
+                        <h2 class="text-orange-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de EL
+                            DICTADOR DE X - WSTEIN196s</h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
@@ -251,7 +316,9 @@
                                         <span class="font-bold text-pink-600">Hola Emi, ¡bienvenida de vuelta!</span> 🎊
                                     </p>
                                     <p class="text-gray-700 text-base leading-relaxed">
-                                        Espero que la hayas pasado bien estos días en Máncora. Tal vez fueron pocos, pero ojalá los hayas disfrutado al máximo, y que los próximos viajes los disfrutes igual o incluso más. 🏖️✨
+                                        Espero que la hayas pasado bien estos días en Máncora. Tal vez fueron pocos,
+                                        pero ojalá los hayas disfrutado al máximo, y que los próximos viajes los
+                                        disfrutes igual o incluso más. 🏖️✨
                                     </p>
                                 </div>
                                 <div class="mt-4 pt-4 border-t border-gray-300">
@@ -259,14 +326,16 @@
                                         <span class="font-bold text-blue-600">Hola Gloglo, ¿Qué sigues vivo???</span> 😂
                                     </p>
                                     <p class="text-gray-700 text-base leading-relaxed">
-                                        Ojalá te hubiera tragado ese tiburón tamare 🦈 la próxima que pidas regalo ten cuidado con las muñecas bombas, espero que me des variedad GORDO… 💣🎁
+                                        Ojalá te hubiera tragado ese tiburón tamare 🦈 la próxima que pidas regalo ten
+                                        cuidado con las muñecas bombas, espero que me des variedad GORDO… 💣🎁
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img\s\2.png" alt="Imagen de Wstein196" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img\s\2.png" alt="Imagen de Wstein196"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
 
@@ -275,107 +344,132 @@
             </div>
 
             <!-- Slide 6 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-5">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-5">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🎬</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">😄</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">📨</div>
-                        <h2 class="text-purple-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Pablop</h2>
-                        
+                        <h2 class="text-purple-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Pablop
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Ummm… bueno, <span class="font-semibold text-pink-600">Emi</span> y <span class="font-semibold text-blue-600">Gloglo (panzón)</span> 😅, la verdad el último viaje a Máncora estuvo chévere, de los mejores streams de enero sin duda. No me quejo si se vuelve a repetir xd 🏖️🌊
+                                    Ummm… bueno, <span class="font-semibold text-pink-600">Emi</span> y <span
+                                        class="font-semibold text-blue-600">Gloglo (panzón)</span> 😅, la verdad el
+                                    último viaje a Máncora estuvo chévere, de los mejores streams de enero sin duda. No
+                                    me quejo si se vuelve a repetir xd 🏖️🌊
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
                                     ¿No se molestan si le hago otro edit bien chill, no? 🎥✨
                                 </p>
                                 <p class="text-gray-600 text-base italic mt-4">
-                                    Ah, por cierto… <span class="font-bold text-red-600">paguen a los cliperos</span>, que no como desde el año pasado xd 😂💀
+                                    Ah, por cierto… <span class="font-bold text-red-600">paguen a los cliperos</span>,
+                                    que no como desde el año pasado xd 😂💀
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img\s\3.png" alt="Imagen de Pablop" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img\s\3.png" alt="Imagen de Pablop"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 7 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-6">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-6">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌊</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💕</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-blue-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Novelero</h2>
-                        
+                        <h2 class="text-blue-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Novelero
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-lg leading-relaxed mb-2 font-semibold text-center">
-                                    Para <span class="text-pink-600">Emi</span> y <span class="text-blue-600">Marx</span> 💖
+                                    Para <span class="text-pink-600">Emi</span> y <span
+                                        class="text-blue-600">Marx</span> 💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Muchachos espero que este viaje reciente a la playa les haya servido para relajarse y sobre todo para conectarse consigo mismos. 🏖️✨
+                                    Muchachos espero que este viaje reciente a la playa les haya servido para relajarse
+                                    y sobre todo para conectarse consigo mismos. 🏖️✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed">
-                                    Que los momentos de alegría, felicidad y conexión sigan entre ustedes dos par de especiales ahaha. 😊💞
+                                    Que los momentos de alegría, felicidad y conexión sigan entre ustedes dos par de
+                                    especiales ahaha. 😊💞
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img\s\6.webp" alt="Imagen de Novelero" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img\s\6.webp" alt="Imagen de Novelero"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
             </div>
 
             <!-- Slide 8 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-7">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-7">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🎉</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">🚀</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-teal-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Timoteo</h2>
-                        
+                        <h2 class="text-teal-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Timoteo
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-bold text-lg">HOLA, <span class="text-pink-600">Emi</span> y <span class="text-blue-600">Gloglo</span></span> 👋
+                                    <span class="font-bold text-lg">HOLA, <span class="text-pink-600">Emi</span> y <span
+                                            class="text-blue-600">Gloglo</span></span> 👋
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-3">
-                                    Los sigo desde hace <span class="font-semibold">1 año</span> y gracias por todo el contenido de calidad y variedad xd. Se nota el cariño, el esfuerzo y la dedicación que ponen en lo que hacen, y eso se transmite del otro lado de la pantalla. 💻✨
+                                    Los sigo desde hace <span class="font-semibold">1 año</span> y gracias por todo el
+                                    contenido de calidad y variedad xd. Se nota el cariño, el esfuerzo y la dedicación
+                                    que ponen en lo que hacen, y eso se transmite del otro lado de la pantalla. 💻✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-3">
-                                    Es un verdadero gusto acompañarlos, desconectar un rato y compartir risas, charlas y buenos momentos. 😄💖
+                                    Es un verdadero gusto acompañarlos, desconectar un rato y compartir risas, charlas y
+                                    buenos momentos. 😄💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-3">
-                                    Nunca se dejen influenciar por los malos comentarios, recuerden que <span class="font-bold text-green-600">los que apoyamos somos más xd</span>. 💪
+                                    Nunca se dejen influenciar por los malos comentarios, recuerden que <span
+                                        class="font-bold text-green-600">los que apoyamos somos más xd</span>. 💪
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-3">
-                                    Siempre diré que los viajes sin camaraman se disfruta más, y <span class="font-semibold text-orange-600">Máncora fue prueba de ello</span>, Que se repita. 🏖️🌊
+                                    Siempre diré que los viajes sin camaraman se disfruta más, y <span
+                                        class="font-semibold text-orange-600">Máncora fue prueba de ello</span>, Que se
+                                    repita. 🏖️🌊
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-3">
                                     Éxitos a los 2 y sigan rompiéndola, 🚀🎉
@@ -384,322 +478,400 @@
                                     <span class="font-semibold">PD:</span> Aléjense de las polémicas, byeeeeeeee 👋😅
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/7.webp" alt="Imagen de Timoteo" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/7.webp" alt="Imagen de Timoteo"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 9 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-8">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-8">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌊</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💻</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💖</div>
                         <h2 class="text-red-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de APG</h2>
-                        
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-bold text-orange-600">Gracias por el Stream de Máncora.</span> 🏖️✨
+                                    <span class="font-bold text-orange-600">Gracias por el Stream de Máncora.</span>
+                                    🏖️✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    He aprendido nuevos códigos que no sabía como valorant, 3 gatitos, la mejor cita va ser en japon y otros XD. Pero igual muchas gracias por el contexto que han dado de su amistad  de ustedes. 😄  💕
+                                    He aprendido nuevos códigos que no sabía como valorant, 3 gatitos, la mejor cita va
+                                    ser en japon y otros XD. Pero igual muchas gracias por el contexto que han dado de
+                                    su amistad de ustedes. 😄 💕
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
                                     , gracias emi por gustarte mis fotos de ustedes 🤔💕
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-semibold">
-                                    Y gracias por hacernos quemar <span class="text-red-600">🔥</span> los quiero mucho 💖
+                                    Y gracias por hacernos quemar <span class="text-red-600">🔥</span> los quiero mucho
+                                    💖
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/8.png" alt="Imagen de APG" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/8.png" alt="Imagen de APG"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 10 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-9">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-9">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌟</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💕</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-indigo-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo</h2>
-                        
+                        <h2 class="text-indigo-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Especiales, espero estos días de mini vacaciones en la playita les haya servido de distracción y de cierta manera <span class="font-semibold text-pink-600">fortalecer el vínculo que tienen</span>, el cual por lo que dejan ver en los streams es algo muy bonito que merece prevalecer. 🏖️💖
+                                    Especiales, espero estos días de mini vacaciones en la playita les haya servido de
+                                    distracción y de cierta manera <span class="font-semibold text-pink-600">fortalecer
+                                        el vínculo que tienen</span>, el cual por lo que dejan ver en los streams es
+                                    algo muy bonito que merece prevalecer. 🏖️💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Espero vengan más viajes así y puedan seguir creciendo juntos, se les quiere a los 2. 🌊✨💕
+                                    Espero vengan más viajes así y puedan seguir creciendo juntos, se les quiere a los
+                                    2. 🌊✨💕
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/9.png" alt="Imagen Anónima" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/9.png" alt="Imagen Anónima"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
             </div>
 
             <!-- Slide 11 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-10">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-10">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💪</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">😊</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">👋</div>
-                        <h2 class="text-cyan-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Nandito</h2>
-                        
+                        <h2 class="text-cyan-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Nandito
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-bold text-lg">¡Hola, <span class="text-blue-600">gordo</span> y <span class="text-pink-600">Patrona</span> 👋!</span>
+                                    <span class="font-bold text-lg">¡Hola, <span class="text-blue-600">gordo</span> y
+                                        <span class="text-pink-600">Patrona</span> 👋!</span>
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Ustedes son un dúo increíble, ¡sigan adelante! Su contenido es genial y me encanta verlos juntos felices y disfrutando el momento. Sigan siendo ustedes mismos, no cambien por nada. 🎉💖
+                                    Ustedes son un dúo increíble, ¡sigan adelante! Su contenido es genial y me encanta
+                                    verlos juntos felices y disfrutando el momento. Sigan siendo ustedes mismos, no
+                                    cambien por nada. 🎉💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Sé que no es fácil, pero no hagan caso a los comentarios negativos y solo ignórenlos. <span class="font-semibold text-green-600">Ustedes son fuertes y pueden con todo.</span> 💪✨
+                                    Sé que no es fácil, pero no hagan caso a los comentarios negativos y solo
+                                    ignórenlos. <span class="font-semibold text-green-600">Ustedes son fuertes y pueden
+                                        con todo.</span> 💪✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-bold">
                                     Estoy aquí para apoyarlos y tanquear todo, ¡yo su cpp! 💪💙
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/10.png" alt="Imagen de Nandito" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/10.png" alt="Imagen de Nandito"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 12 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-11">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-11">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🐱</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">🦊</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">🏛️</div>
-                        <h2 class="text-amber-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Gato ingeniero</h2>
-                        
+                        <h2 class="text-amber-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Gato
+                            ingeniero</h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-bold text-lg">Hola <span class="text-blue-600">Gloglo</span> y <span class="text-pink-600">Emi</span></span>, espero hayan disfrutado su viaje a Mancora 🫶, ya merecían unas vacaciones para quitarse el estrés y relajarse, espero que se encuentren mucho mejor❤️‍🔥.
+                                    <span class="font-bold text-lg">Hola <span class="text-blue-600">Gloglo</span> y
+                                        <span class="text-pink-600">Emi</span></span>, espero hayan disfrutado su viaje
+                                    a Mancora 🫶, ya merecían unas vacaciones para quitarse el estrés y relajarse,
+                                    espero que se encuentren mucho mejor❤️‍🔥.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Gracias por los buenos momentos ☺️ que se logra disfrutar en los streams, sigan manteniendo ese carisma que los caracteriza. 🎉✨
+                                    Gracias por los buenos momentos ☺️ que se logra disfrutar en los streams, sigan
+                                    manteniendo ese carisma que los caracteriza. 🎉✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4 font-semibold">
                                     Les deseo éxitos tanto en Stream como en lo personal. 🚀🌟
                                 </p>
                                 <p class="text-gray-600 text-sm italic mt-4">
-                                    <span class="font-semibold">Posdata:</span> Me separan al más especial 😈😈 🦁🕷️😳😳
+                                    <span class="font-semibold">Posdata:</span> Me separan al más especial 😈😈
+                                    🦁🕷️😳😳
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/11.webp" alt="Imagen de gato ingeniero" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/11.webp" alt="Imagen de gato ingeniero"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
             </div>
 
             <!-- Slide 12 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-11">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-11">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🔥</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">🌊</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">😎</div>
-                        <h2 class="text-emerald-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Dishoku </h2>
-                        
+                        <h2 class="text-emerald-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de
+                            Dishoku </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Esas minivacaciones eran más que necesarias, ya tocaba resetear el cerebro en la playita de chill 😎🏛️.
+                                    Esas minivacaciones eran más que necesarias, ya tocaba resetear el cerebro en la
+                                    playita de chill 😎🏛️.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
                                     Espero lo hayan disfrutado full y regresen con toda la energía pa romperla 💪🔥.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Recuerden que <span class="font-semibold text-purple-600">no están solos</span>, su comunidad siempre está firme apoyando y quemando con cariño 😂❤️.
+                                    Recuerden que <span class="font-semibold text-purple-600">no están solos</span>, su
+                                    comunidad siempre está firme apoyando y quemando con cariño 😂❤️.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-bold">
                                     Muchos éxitos y que sigan creciendo, los queremos xd. 🌟💖
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/12.webp" alt="Imagen de la Comunidad" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/12.webp" alt="Imagen de la Comunidad"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
             </div>
 
             <!-- Slide 13 -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-12">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-12">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌟</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">🐱</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">🏎️</div>
-                        <h2 class="text-lime-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de g.alva</h2>
-                        
+                        <h2 class="text-lime-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de g.alva
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Antes que todo espero hallan pasado un lindo viaje <span class="font-semibold text-pink-600">EMI</span> y <span class="font-semibold text-blue-600">Marx</span>, en estas mini vacaciones mostraron un poco de ustedes en off, a ambos se los ve con un brillo sin igual y radiantes!! ✨😊
+                                    Antes que todo espero hallan pasado un lindo viaje <span
+                                        class="font-semibold text-pink-600">EMI</span> y <span
+                                        class="font-semibold text-blue-600">Marx</span>, en estas mini vacaciones
+                                    mostraron un poco de ustedes en off, a ambos se los ve con un brillo sin igual y
+                                    radiantes!! ✨😊
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Espero este viaje los halla recargado y se hallan divertido, ya era hora que EMI saque de su zona de confort al leoncito xd, aún falta <span class="font-bold text-purple-600">la mejor cita que será en Japón</span> xd. 🇯fefe💖
+                                    Espero este viaje los halla recargado y se hallan divertido, ya era hora que EMI
+                                    saque de su zona de confort al leoncito xd, aún falta <span
+                                        class="font-bold text-purple-600">la mejor cita que será en Japón</span> xd.
+                                    🇯fefe💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
                                     Ya estoy esperando con ansias a los nuevos engreidos que llegarán a la casa 👀🐾
                                 </p>
                                 <p class="text-gray-600 text-sm italic mt-4">
-                                    <span class="font-semibold">Psdt:</span> Ya estoy esperando con mi terno para el momento v: 🤵💖
+                                    <span class="font-semibold">Psdt:</span> Ya estoy esperando con mi terno para el
+                                    momento v: 🤵💖
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/13.webp" alt="Imagen de g.alva" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/13.webp" alt="Imagen de g.alva"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
             </div>
 
             <!-- Slide 14 - Mensaje de Ejemplo -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-13">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-13">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💖</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💖</div>
-                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo</h2>
-                        
+                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Hola <span class="font-semibold text-pink-600">Emily</span> y <span class="font-semibold text-blue-600">Marx</span>, soy un simple espectador, pero como seguidor de los dos incluso desde antes que se conocieran déjenme decirles que me gusta como fueron forjando su <span class="font-semibold">"amistad"</span> y el como saben sobrellevar las cosas. 💫
+                                    Hola <span class="font-semibold text-pink-600">Emily</span> y <span
+                                        class="font-semibold text-blue-600">Marx</span>, soy un simple espectador, pero
+                                    como seguidor de los dos incluso desde antes que se conocieran déjenme decirles que
+                                    me gusta como fueron forjando su <span class="font-semibold">"amistad"</span> y el
+                                    como saben sobrellevar las cosas. 💫
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    El gordo se pone pussy rápido así que necesita alguien tranquila como tú para que se calme y la chibola a veces se deja llevar rápido por los comentarios negativos y necesita al gordo para que no se baje. 💪💖
+                                    El gordo se pone pussy rápido así que necesita alguien tranquila como tú para que se
+                                    calme y la chibola a veces se deja llevar rápido por los comentarios negativos y
+                                    necesita al gordo para que no se baje. 💪💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-semibold">
-                                    Espero que sigan siendo una muy buena pareja de <span class="text-purple-600">"amigos"</span> y sigan siendo ustedes mismos. ✨🌟
+                                    Espero que sigan siendo una muy buena pareja de <span
+                                        class="text-purple-600">"amigos"</span> y sigan siendo ustedes mismos. ✨🌟
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/14.webp" alt="Imagen anónima" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/14.webp" alt="Imagen anónima"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <!-- Slide 15 - GersonIgnacio -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-14">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-14">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌟</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💪</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">📜</div>
-                        <h2 class="text-violet-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de GersonIgnacio</h2>
-                        
+                        <h2 class="text-violet-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de
+                            GersonIgnacio</h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Que el <span class="font-bold text-green-600">éxito</span>, <span class="font-bold text-blue-600">templanza</span> y <span class="font-bold text-purple-600">sabiduría</span> acompañe a la <span class="font-semibold text-pink-600">Patrona</span> y al <span class="font-semibold text-blue-600">Mojón</span>.
+                                    Que el <span class="font-bold text-green-600">éxito</span>, <span
+                                        class="font-bold text-blue-600">templanza</span> y <span
+                                        class="font-bold text-purple-600">sabiduría</span> acompañe a la <span
+                                        class="font-semibold text-pink-600">Patrona</span> y al <span
+                                        class="font-semibold text-blue-600">Mojón</span>.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-green-600">Éxito</span> para cumplir sus metas y propuestas y que la pereza sea más débil que las ganas de triunfar. 🚀
+                                    <span class="font-semibold text-green-600">Éxito</span> para cumplir sus metas y
+                                    propuestas y que la pereza sea más débil que las ganas de triunfar. 🚀
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-blue-600">Templanza</span> para superar los momentos difíciles que la vida siempre nos pone para superarlos y crecer como personas y como <span class="italic">"amigos"</span>. 💪
+                                    <span class="font-semibold text-blue-600">Templanza</span> para superar los momentos
+                                    difíciles que la vida siempre nos pone para superarlos y crecer como personas y como
+                                    <span class="italic">"amigos"</span>. 💪
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-purple-600">Sabiduría</span> para tomar las mejores decisiones en el camino, sobre todo en los momentos en donde la ruta está más difusa. 🧭
+                                    <span class="font-semibold text-purple-600">Sabiduría</span> para tomar las mejores
+                                    decisiones en el camino, sobre todo en los momentos en donde la ruta está más
+                                    difusa. 🧭
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4 font-semibold">
-                                    Mis mejores y más grandes deseos para que les vaya bien y recuerden que su comunidad los aprecia mucho. 💖✨
+                                    Mis mejores y más grandes deseos para que les vaya bien y recuerden que su comunidad
+                                    los aprecia mucho. 💖✨
                                 </p>
                                 <p class="text-gray-600 text-sm italic mt-4">
-                                    <span class="font-semibold">PD:</span> aunque el gordo sólo entra al DC cuando está cagando 😂💀
+                                    <span class="font-semibold">PD:</span> aunque el gordo sólo entra al DC cuando está
+                                    cagando 😂💀
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/15.jpeg" alt="Imagen de GersonIgnacio" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/15.jpeg" alt="Imagen de GersonIgnacio"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
                     </div>
@@ -707,79 +879,122 @@
             </div>
 
             <!-- Slide 15.5 - lentejas lisiada -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-14-5">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-14-5">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🌸</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💭</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-fuchsia-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de lenteja lisiada</h2>
-                        
+                        <h2 class="text-fuchsia-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de
+                            lenteja lisiada</h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Hola <span class="font-semibold text-blue-600">gordo mercenario</span> y <span class="font-semibold text-pink-600">patrona</span>, la verdad no sé que decir (avisaron con poca antelación sobre estos mensajes xd) tampoco creo que haya mucho que decir que no sepan, ustedes ya saben que los queremos y apoyamos. 💖
+                                    Hola <span class="font-semibold text-blue-600">gordo mercenario</span> y <span
+                                        class="font-semibold text-pink-600">patrona</span>, la verdad no sé que decir
+                                    (avisaron con poca antelación sobre estos mensajes xd) tampoco creo que haya mucho
+                                    que decir que no sepan, ustedes ya saben que los queremos y apoyamos. 💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Pero quería recalcar que <span class="font-semibold">a pesar que siempre estemos jodiendolos allí estaremos si nos necesitan</span> y quizá darles un pequeño jalón de orejas. 👂
+                                    Pero quería recalcar que <span class="font-semibold">a pesar que siempre estemos
+                                        jodiendolos allí estaremos si nos necesitan</span> y quizá darles un pequeño
+                                    jalón de orejas. 👂
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Por ejemplo a <span class="font-semibold text-pink-600">Emi</span>, que cuando hizo su tier list de meses del 2025 calificó los meses más por las cosas malas que pasaron en lugar de calificarlos por las cosas buenas (tipo: "este mes pasó esto bonito pero esto la cagó") cuando debería ser al revés. 🤔
+                                    Por ejemplo a <span class="font-semibold text-pink-600">Emi</span>, que cuando hizo
+                                    su tier list de meses del 2025 calificó los meses más por las cosas malas que
+                                    pasaron en lugar de calificarlos por las cosas buenas (tipo: "este mes pasó esto
+                                    bonito pero esto la cagó") cuando debería ser al revés. 🤔
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Siento que podrías pensar que es lo mismo pero no, <span class="font-semibold text-purple-600">el enfoque influye mucho</span> aunque no lo crean y este mensaje va también para ti <span class="font-semibold text-blue-600">gordo</span>.
+                                    Siento que podrías pensar que es lo mismo pero no, <span
+                                        class="font-semibold text-purple-600">el enfoque influye mucho</span> aunque no
+                                    lo crean y este mensaje va también para ti <span
+                                        class="font-semibold text-blue-600">gordo</span>.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4 font-semibold">
-                                    Enfóquense más en lo bonito que tienen y no olviden la suerte que tienen de estar tan bien acompañados de buenas personas que los apoyan y quieren, así como su comunidad. ✨💕
+                                    Enfóquense más en lo bonito que tienen y no olviden la suerte que tienen de estar
+                                    tan bien acompañados de buenas personas que los apoyan y quieren, así como su
+                                    comunidad. ✨💕
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Y bueno solo eso por el momento porque escribo esto en la calle y el chamo que me ha estado siguiendo 3 cuadras ya me parece sospechoso seguramente sólo quiere compartir su felicidad por la captura de maduro :v 😅
+                                    Y bueno solo eso por el momento porque escribo esto en la calle y el chamo que me ha
+                                    estado siguiendo 3 cuadras ya me parece sospechoso seguramente sólo quiere compartir
+                                    su felicidad por la captura de maduro :v 😅
                                 </p>
                                 <p class="text-gray-600 text-sm italic mt-4">
-                                    <span class="font-semibold">Posdata:</span> si van a hacer el viaje a Japón (nunca les creeré a un Loayza ni a una Umaña hasta que vea los pasajes comprados) recuerden que tienen que planear el viaje a Japón con meses de antelación y preparar muchas cosas. 🇯🇵✈️
+                                    <span class="font-semibold">Posdata:</span> si van a hacer el viaje a Japón (nunca
+                                    les creeré a un Loayza ni a una Umaña hasta que vea los pasajes comprados) recuerden
+                                    que tienen que planear el viaje a Japón con meses de antelación y preparar muchas
+                                    cosas. 🇯🇵✈️
                                 </p>
                             </div>
 
-                                                        <!-- Imagen a la derecha -->
+                            <!-- Imagen a la derecha -->
 
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
 
-                        <!-- Slide 15.5 - Mensaje de Insane -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-15-5">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-5xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <!-- Slide 15.5 - Mensaje de Insane -->
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-15-5">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-5xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💖</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">💝</div>
-                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">🎉</div>
-                    
+                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">💝
+                    </div>
+                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">🎉
+                    </div>
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💌</div>
-                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Insane</h2>
-                        
+                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Insane
+                        </h2>
+
                         <div class="bg-white/60 rounded-2xl p-8 backdrop-blur-sm shadow-inner">
                             <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                                Hola, <span class="font-semibold text-pink-600">Emi</span> y <span class="font-semibold text-blue-600">Gloglo</span>: 👋
+                                Hola, <span class="font-semibold text-pink-600">Emi</span> y <span
+                                    class="font-semibold text-blue-600">Gloglo</span>: 👋
                             </p>
                             <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                                Me llamo <span class="font-semibold text-rose-600">Insane</span>, kukeada de corazón 💖. Sigo a <span class="text-pink-600">Emi</span> desde hace <span class="font-bold text-purple-600">más de 4 años</span> y a <span class="text-blue-600">Gloglo</span> desde hace <span class="font-bold">1 año</span>. 📅
+                                Me llamo <span class="font-semibold text-rose-600">Insane</span>, kukeada de corazón 💖.
+                                Sigo a <span class="text-pink-600">Emi</span> desde hace <span
+                                    class="font-bold text-purple-600">más de 4 años</span> y a <span
+                                    class="text-blue-600">Gloglo</span> desde hace <span class="font-bold">1 año</span>.
+                                📅
                             </p>
                             <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                                Es una <span class="font-semibold text-purple-600">fortuna</span> conocerlos a ambos. ✨ Transmiten <span class="font-semibold text-orange-600">alegría y buena vibra</span> en los streams; son los <span class="font-bold text-green-600">únicos</span> que lograron que no quiera perderme casi ningún directo. 🎮 Antes solo veía sin falta a El Rubius, pero ustedes llegaron para mí a ese mismo <span class="font-bold text-blue-600">nivel top</span>: streamers entretenidos, reconfortantes y que procuran no meterse ni rebajarse a hablar directamente de polémicas ajenas. Nunca cambien; sigan enfocados en lo que los hace felices y transmitiendo buena onda 😌💫
+                                Es una <span class="font-semibold text-purple-600">fortuna</span> conocerlos a ambos. ✨
+                                Transmiten <span class="font-semibold text-orange-600">alegría y buena vibra</span> en
+                                los streams; son los <span class="font-bold text-green-600">únicos</span> que lograron
+                                que no quiera perderme casi ningún directo. 🎮 Antes solo veía sin falta a El Rubius,
+                                pero ustedes llegaron para mí a ese mismo <span class="font-bold text-blue-600">nivel
+                                    top</span>: streamers entretenidos, reconfortantes y que procuran no meterse ni
+                                rebajarse a hablar directamente de polémicas ajenas. Nunca cambien; sigan enfocados en
+                                lo que los hace felices y transmitiendo buena onda 😌💫
                             </p>
                             <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                                Por favor, tengan siempre presente a <span class="font-semibold text-orange-600">la gente que los apoya, anima y aconseja</span>, en las buenas, en las malas y, sobre todo, <span class="font-bold text-red-600">en las peores</span>. 🙏💪
+                                Por favor, tengan siempre presente a <span class="font-semibold text-orange-600">la
+                                    gente que los apoya, anima y aconseja</span>, en las buenas, en las malas y, sobre
+                                todo, <span class="font-bold text-red-600">en las peores</span>. 🙏💪
                             </p>
                             <p class="text-gray-700 text-lg leading-relaxed">
-                                <span class="font-semibold text-green-600">Éxitos</span> en sus vidas personales y en todos los proyectos que se propongan. 🌟 Con mucho cariño, de parte de una <span class="font-bold text-pink-600">kukeada de corazón</span> 💖, ahora también <span class="font-bold text-purple-600">gloglocita</span> 💝
+                                <span class="font-semibold text-green-600">Éxitos</span> en sus vidas personales y en
+                                todos los proyectos que se propongan. 🌟 Con mucho cariño, de parte de una <span
+                                    class="font-bold text-pink-600">kukeada de corazón</span> 💖, ahora también <span
+                                    class="font-bold text-purple-600">gloglocita</span> 💝
                             </p>
                         </div>
 
@@ -788,42 +1003,57 @@
             </div>
 
             <!-- Slide 15.6 - Mensaje de Cristopher Saenz -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-15-6">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-5xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-15-6">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-5xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💙</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">🎉</div>
-                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">💖</div>
-                    
+                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">🎉
+                    </div>
+                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">💖
+                    </div>
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">💬</div>
-                        <h2 class="text-blue-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Cristopher Saenz</h2>
-                        
+                        <h2 class="text-blue-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de
+                            Cristopher Saenz</h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Gracias por la felicidad que nos dan con su química y alegría cuando están juntos. No se dejen llevar por los malos comentarios ni por quienes quieren separarlos. Tienen una gran comunidad que los respalda.
+                                    Gracias por la felicidad que nos dan con su química y alegría cuando están juntos.
+                                    No se dejen llevar por los malos comentarios ni por quienes quieren separarlos.
+                                    Tienen una gran comunidad que los respalda.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Qué bueno que tuvieron un viaje solos para divertirse. Ojalá vengan más viajes juntos.
+                                    Qué bueno que tuvieron un viaje solos para divertirse. Ojalá vengan más viajes
+                                    juntos.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-pink-600">Para Emi:</span> Saca más al gordo de paseo, necesita esos cambios de aire. Gracias por la vibra positiva, por darle un nuevo aire y por tu química con él. No te bajes tú sola, enfócate en lo bueno y en quienes te quieren. Suerte este año.
+                                    <span class="font-semibold text-pink-600">Para Emi:</span> Saca más al gordo de
+                                    paseo, necesita esos cambios de aire. Gracias por la vibra positiva, por darle un
+                                    nuevo aire y por tu química con él. No te bajes tú sola, enfócate en lo bueno y en
+                                    quienes te quieren. Suerte este año.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-blue-600">Para GloGlo:</span> Disfruta y haz lo que quieras sin necesitar la aprobación de nadie. Deja dar explicaciones innecesarias. Te respeto por tu madurez. Apoya a Emi cuando lo necesite, que tu compañía le hace bien. No te preocupes por lo que digan los demás.
+                                    <span class="font-semibold text-blue-600">Para GloGlo:</span> Disfruta y haz lo que
+                                    quieras sin necesitar la aprobación de nadie. Deja dar explicaciones innecesarias.
+                                    Te respeto por tu madurez. Apoya a Emi cuando lo necesite, que tu compañía le hace
+                                    bien. No te preocupes por lo que digan los demás.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-semibold text-center">
                                     Seguiremos apoyándolos. ¡Que se vengan más cosas juntos! 🎊
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/16.webp" alt="Imagen de Cristopher Saenz" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/16.webp" alt="Imagen de Cristopher Saenz"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
                     </div>
@@ -831,83 +1061,106 @@
             </div>
 
             <!-- Slide 15.7 - Mensaje de Sendo -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-15-7">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-15-7">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">😄</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">💪</div>
-                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">🌟</div>
-                    
+                    <div class="absolute bottom-8 right-10 text-3xl animate-bounce" style="animation-delay: 0.3s;">💪
+                    </div>
+                    <div class="absolute bottom-10 left-10 text-3xl animate-pulse" style="animation-delay: 0.6s;">🌟
+                    </div>
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">👟</div>
-                        <h2 class="text-orange-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Sendo</h2>
-                        
+                        <h2 class="text-orange-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje de Sendo
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    Qué tal Emi y Gloglo, gracias por sacar una sonrisa a la gente que los ve y apoya. Por estar unidos pese a los malos momentos y por tener esa gran conexión que solo ustedes tienen. Estar juntos les hace bien y se nota, sigan así y van a prosperar.
+                                    Qué tal Emi y Gloglo, gracias por sacar una sonrisa a la gente que los ve y apoya.
+                                    Por estar unidos pese a los malos momentos y por tener esa gran conexión que solo
+                                    ustedes tienen. Estar juntos les hace bien y se nota, sigan así y van a prosperar.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-pink-600">A Emi:</span> Por ser tal como es y gracias a eso consiguió una comunidad que la apoya y quiere. 💖
+                                    <span class="font-semibold text-pink-600">A Emi:</span> Por ser tal como es y
+                                    gracias a eso consiguió una comunidad que la apoya y quiere. 💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-blue-600">A Gloglo:</span> Por seguir prosperando e intentar ser mejor cada día, sacándonos una sonrisa siempre. 😊
+                                    <span class="font-semibold text-blue-600">A Gloglo:</span> Por seguir prosperando e
+                                    intentar ser mejor cada día, sacándonos una sonrisa siempre. 😊
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    No se centren en lo malo, vean también lo bueno. Tienen comunidades grandes que los apoyan y quieren por ser como son, aún con sus defectos y todo.
+                                    No se centren en lo malo, vean también lo bueno. Tienen comunidades grandes que los
+                                    apoyan y quieren por ser como son, aún con sus defectos y todo.
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed italic mb-2">
                                     TMR la kgda, soné muy cursi. 😅
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed font-semibold">
-                                    Yo, representante de la ganga, me despido para seguir lustrando zapatos. Los amo y ojalá ya pronto den la noticia mrd. 👟✨
+                                    Yo, representante de la ganga, me despido para seguir lustrando zapatos. Los amo y
+                                    ojalá ya pronto den la noticia mrd. 👟✨
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/17.jpg" alt="Imagen de Sendo" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/17.jpg" alt="Imagen de Sendo"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-                        <!-- Slide 18 - Nuevo Mensaje Anónimo -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-17">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <!-- Slide 18 - Nuevo Mensaje Anónimo -->
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-17">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🏖️</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">💫</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">🎭</div>
-                        <h2 class="text-purple-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo</h2>
-                        
+                        <h2 class="text-purple-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Mensaje Anónimo
+                        </h2>
+
                         <!-- Contenedor flex para texto e imagen en fila -->
                         <div class="flex items-center gap-6">
                             <!-- Texto a la izquierda -->
                             <div class="flex-1 bg-white/60 rounded-2xl p-6 backdrop-blur-sm shadow-inner text-left">
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    El stream de la playa fue muy reconfortante y divertido. Fue lindo verlos disfrutar siendo ustedes mismos. <span class="font-semibold text-purple-600">Esperamos más streams así.</span> 🏖️✨
+                                    El stream de la playa fue muy reconfortante y divertido. Fue lindo verlos disfrutar
+                                    siendo ustedes mismos. <span class="font-semibold text-purple-600">Esperamos más
+                                        streams así.</span> 🏖️✨
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-pink-600">Para Emi:</span> Espero que hayas disfrutado las subs regaladas. Espero mi chupistream xd 😄💖
+                                    <span class="font-semibold text-pink-600">Para Emi:</span> Espero que hayas
+                                    disfrutado las subs regaladas. Espero mi chupistream xd 😄💖
                                 </p>
                                 <p class="text-gray-700 text-base leading-relaxed mb-4">
-                                    <span class="font-semibold text-blue-600">Para el Gordito:</span> Hay algo especial que pronto llegará y que te puede gustar mucho. <span class="font-semibold text-green-600">Viene de parte de la gente del DC que te apoya.</span> 🎁💪
+                                    <span class="font-semibold text-blue-600">Para el Gordito:</span> Hay algo especial
+                                    que pronto llegará y que te puede gustar mucho. <span
+                                        class="font-semibold text-green-600">Viene de parte de la gente del DC que te
+                                        apoya.</span> 🎁💪
                                 </p>
                                 <p class="text-gray-600 text-sm italic mt-4">
-                                    <span class="font-semibold">Psdt:</span> Nunca crean a un Loayza y mucho menos a una Umaña 😂
+                                    <span class="font-semibold">Psdt:</span> Nunca crean a un Loayza y mucho menos a una
+                                    Umaña 😂
                                 </p>
                             </div>
-                            
+
                             <!-- Imagen a la derecha -->
                             <div class="flex-shrink-0 w-80">
-                                <img src="img/s/18.png" alt="Imagen Anónima" class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
+                                <img src="img/s/18.png" alt="Imagen Anónima"
+                                    class="rounded-2xl shadow-xl border-4 border-white/50 w-full h-auto">
                             </div>
                         </div>
                     </div>
@@ -915,15 +1168,17 @@
             </div>
 
             <!-- Slide 16 - Vacío -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-15">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-15">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">💖</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">✨</div>
-                    
+
                     <div class="relative z-10">
-                       
-                        
+
+
                         <!-- Grid de mensajes cortos -->
                         <div class="grid grid-cols-2 gap-4">
                             <!-- Mia -->
@@ -931,53 +1186,60 @@
                                 <p class="font-bold text-pink-700 mb-2">💖 Mia</p>
                                 <p class="text-gray-700 text-sm">Que ricos están los 2</p>
                             </div>
-                            
+
                             <!-- Angela -->
                             <div class="bg-purple-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-purple-700 mb-2">✨ Angela</p>
-                                <p class="text-gray-700 text-sm">Que sigan creciendo juntos y disfrutando cada momento. Se les quiere mucho! 💜</p>
+                                <p class="text-gray-700 text-sm">Que sigan creciendo juntos y disfrutando cada momento.
+                                    Se les quiere mucho! 💜</p>
                             </div>
-                            
+
                             <!-- Estefany -->
                             <div class="bg-blue-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-blue-700 mb-2">💙 Estefany</p>
-                                <p class="text-gray-700 text-sm">Muchos éxitos en todo lo que viene! Sigan siendo ustedes mismos 😊✨</p>
+                                <p class="text-gray-700 text-sm">Muchos éxitos en todo lo que viene! Sigan siendo
+                                    ustedes mismos 😊✨</p>
                             </div>
-                            
+
                             <!-- Andrea -->
                             <div class="bg-green-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-green-700 mb-2">💚 Andrea</p>
-                                <p class="text-gray-700 text-sm">Hermosa su amistad, que continúen compartiendo momentos únicos juntos 🌿💕</p>
+                                <p class="text-gray-700 text-sm">Hermosa su amistad, que continúen compartiendo momentos
+                                    únicos juntos 🌿💕</p>
                             </div>
-                            
+
                             <!-- Mariel -->
                             <div class="bg-yellow-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-yellow-700 mb-2">🌟 Mariel</p>
-                                <p class="text-gray-700 text-sm">Que bonito verlos tan felices! Siguen brillando y disfrutando 🌟😊</p>
+                                <p class="text-gray-700 text-sm">Que bonito verlos tan felices! Siguen brillando y
+                                    disfrutando 🌟😊</p>
                             </div>
-                            
+
                             <!-- Nikol -->
                             <div class="bg-rose-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-rose-700 mb-2">🌸 Nikol</p>
-                                <p class="text-gray-700 text-sm">Que este año continúe con la misma vibra, lleno de momentos auténticos y energía bonita.</p>
+                                <p class="text-gray-700 text-sm">Que este año continúe con la misma vibra, lleno de
+                                    momentos auténticos y energía bonita.</p>
                             </div>
-                            
+
                             <!-- V -->
                             <div class="bg-indigo-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-indigo-700 mb-2">💪🌹 V </p>
-                                <p class="text-gray-700 text-sm">Que este nuevo año les regale luz, sonrisas y sueños cumplidos a ambos. Que la buena energía los acompañe</p>
+                                <p class="text-gray-700 text-sm">Que este nuevo año les regale luz, sonrisas y sueños
+                                    cumplidos a ambos. Que la buena energía los acompañe</p>
                             </div>
-                            
+
                             <!-- Gerardo -->
                             <div class="bg-orange-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-orange-700 mb-2">🦁 Gerardo chupapimuñaño</p>
                                 <p class="text-gray-700 text-sm">Los quiero muchos a los 2, pero igual glogló de mrd</p>
                             </div>
-                            
+
                             <!-- Codewerl -->
                             <div class="bg-teal-100/80 rounded-xl p-4 backdrop-blur-sm shadow-md">
                                 <p class="font-bold text-teal-700 mb-2">💻 Codewerl</p>
-                                <p class="text-gray-700 text-sm">chicos gran stream que hicieron en mancora ojala q se repita, los quiero mucho</p>
+                                <p class="text-gray-700 text-sm">chicos gran stream que hicieron en mancora ojala q se
+                                    repita, los quiero mucho</p>
                             </div>
                         </div>
                     </div>
@@ -987,62 +1249,95 @@
 
 
             <!-- Slide 17 - Galería de Imágenes -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-16">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-16">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-12 py-10 max-w-6xl shadow-2xl relative overflow-y-auto max-h-[90vh]">
                     <!-- Iconos decorativos -->
                     <div class="absolute top-6 right-8 text-3xl animate-pulse">🖼️</div>
                     <div class="absolute top-10 left-8 text-3xl animate-bounce">📸</div>
-                    
+
                     <div class="relative z-10">
                         <div class="mb-4 text-4xl text-center">🎨</div>
-                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Las mejores fotos</h2>
-                        
+                        <h2 class="text-rose-600 text-3xl mb-6 font-bold drop-shadow-sm text-center">Las mejores fotos
+                        </h2>
+
                         <!-- Grid de imágenes -->
                         <div class="grid grid-cols-3 gap-4">
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/1.jpeg" alt="Foto 1" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/1.jpeg" alt="Foto 1"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/2.jpeg" alt="Foto 2" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/2.jpeg" alt="Foto 2"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/3.png" alt="Foto 3" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/3.png" alt="Foto 3"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/4.jpeg" alt="Foto 4" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/4.jpeg" alt="Foto 4"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/5.jpeg" alt="Foto 5" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/5.jpeg" alt="Foto 5"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/6.jpeg" alt="Foto 6" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/6.jpeg" alt="Foto 6"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/7.png" alt="Foto 7" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/7.png" alt="Foto 7"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/8.png" alt="Foto 8" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/8.png" alt="Foto 8"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/9.png" alt="Foto 9" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/9.png" alt="Foto 9"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/10.png" alt="Foto 10" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/10.png" alt="Foto 10"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/11.png" alt="Foto 11" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/11.png" alt="Foto 11"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/12.png" alt="Foto 12" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/12.png" alt="Foto 12"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/13.jpg" alt="Foto 13" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/13.jpg" alt="Foto 13"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/14.png" alt="Foto 14" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/14.png" alt="Foto 14"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                                <img src="img/gallery/15.png" alt="Foto 14" class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                                <img src="img/gallery/15.png" alt="Foto 14"
+                                    class="w-full h-full object-cover hover:scale-125 transition-transform duration-500">
                             </div>
                         </div>
                     </div>
@@ -1052,22 +1347,28 @@
 
 
             <!-- Slide 19 - Mensaje Final -->
-            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none" id="slide-18">
-                <div class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-3xl text-center shadow-2xl relative overflow-hidden">
+            <div class="slide absolute w-full h-full flex items-center justify-center opacity-0 pointer-events-none"
+                id="slide-18">
+                <div
+                    class="card-animate bg-yellow-100/90 backdrop-blur-lg rounded-3xl px-20 py-16 max-w-3xl text-center shadow-2xl relative overflow-hidden">
                     <!-- Iconos flotantes decorativos -->
                     <div class="absolute top-6 left-8 text-4xl animate-bounce" style="animation-delay: 0s;">💖</div>
                     <div class="absolute top-12 right-12 text-3xl animate-bounce" style="animation-delay: 0.3s;">✨</div>
-                    <div class="absolute bottom-10 left-12 text-3xl animate-bounce" style="animation-delay: 0.6s;">🎉</div>
-                    <div class="absolute bottom-8 right-8 text-4xl animate-bounce" style="animation-delay: 0.9s;">🌟</div>
+                    <div class="absolute bottom-10 left-12 text-3xl animate-bounce" style="animation-delay: 0.6s;">🎉
+                    </div>
+                    <div class="absolute bottom-8 right-8 text-4xl animate-bounce" style="animation-delay: 0.9s;">🌟
+                    </div>
                     <div class="absolute top-1/2 left-4 text-2xl animate-pulse">🌈</div>
                     <div class="absolute top-1/3 right-6 text-2xl animate-pulse" style="animation-delay: 0.5s;">💝</div>
                     <div class="absolute bottom-1/3 left-6 text-2xl animate-pulse" style="animation-delay: 1s;">🌸</div>
-                    
+
                     <!-- Corazones flotantes -->
                     <div class="heart-float absolute top-20 left-1/4 text-pink-400 text-xl opacity-70">❤️</div>
-                    <div class="heart-float absolute top-32 right-1/4 text-pink-400 text-xl opacity-70" style="animation-delay: 1s;"></div>
-                    <div class="heart-float absolute bottom-24 left-1/3 text-pink-400 text-xl opacity-70" style="animation-delay: 2s;"></div>
-                    
+                    <div class="heart-float absolute top-32 right-1/4 text-pink-400 text-xl opacity-70"
+                        style="animation-delay: 1s;"></div>
+                    <div class="heart-float absolute bottom-24 left-1/3 text-pink-400 text-xl opacity-70"
+                        style="animation-delay: 2s;"></div>
+
                     <!-- Contenido principal con z-index mayor -->
                     <div class="relative z-10">
                         <div class="mb-6 text-6xl animate-pulse">🙏</div>
@@ -1085,51 +1386,106 @@
         </div>
 
         <!-- Botones de navegación -->
-        <button onclick="changeSlide(-1)" class="absolute top-1/2 -translate-y-1/2 left-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-orange-400 hover:from-pink-500 hover:to-orange-500 rounded-2xl text-white text-3xl font-bold flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-xl hover:-translate-x-1 z-10 backdrop-blur-sm border-2 border-white/30">
+        <button onclick="changeSlide(-1)"
+            class="absolute top-1/2 -translate-y-1/2 left-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-orange-400 hover:from-pink-500 hover:to-orange-500 rounded-2xl text-white text-3xl font-bold flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-xl hover:-translate-x-1 z-10 backdrop-blur-sm border-2 border-white/30">
             ←
         </button>
-        <button onclick="changeSlide(1)" class="absolute top-1/2 -translate-y-1/2 right-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-orange-400 hover:from-pink-500 hover:to-orange-500 rounded-2xl text-white text-3xl font-bold flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-xl hover:translate-x-1 z-10 backdrop-blur-sm border-2 border-white/30">
+        <button onclick="changeSlide(1)"
+            class="absolute top-1/2 -translate-y-1/2 right-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-orange-400 hover:from-pink-500 hover:to-orange-500 rounded-2xl text-white text-3xl font-bold flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-xl hover:translate-x-1 z-10 backdrop-blur-sm border-2 border-white/30">
             →
         </button>
 
         <!-- Indicadores -->
         <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-            <span onclick="goToSlide(0)" class="dot w-4 h-4 rounded-full bg-white border-2 border-orange-500 cursor-pointer transition-all scale-125" data-index="0"></span>
-            <span onclick="goToSlide(1)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="1"></span>
-            <span onclick="goToSlide(2)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="2"></span>
-            <span onclick="goToSlide(3)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="3"></span>
-            <span onclick="goToSlide(4)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="4"></span>
-            <span onclick="goToSlide(5)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="5"></span>
-            <span onclick="goToSlide(6)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="6"></span>
-            <span onclick="goToSlide(7)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="7"></span>
-            <span onclick="goToSlide(8)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="8"></span>
-            <span onclick="goToSlide(9)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="9"></span>
-            <span onclick="goToSlide(10)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="10"></span>
-            <span onclick="goToSlide(11)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="11"></span>
-            <span onclick="goToSlide(12)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="12"></span>
-            <span onclick="goToSlide(13)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="13"></span>
-            <span onclick="goToSlide(14)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="14"></span>
-            <span onclick="goToSlide(15)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="15"></span>
-            <span onclick="goToSlide(16)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="16"></span>
-            <span onclick="goToSlide(17)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="17"></span>
-            <span onclick="goToSlide(18)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="18"></span>
-            <span onclick="goToSlide(19)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="19"></span>
-            <span onclick="goToSlide(20)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="20"></span>
-            <span onclick="goToSlide(21)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="21"></span>
-            <span onclick="goToSlide(22)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="22"></span>
-            <span onclick="goToSlide(23)" class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all" data-index="23"></span>
+            <span onclick="goToSlide(0)"
+                class="dot w-4 h-4 rounded-full bg-white border-2 border-orange-500 cursor-pointer transition-all scale-125"
+                data-index="0"></span>
+            <span onclick="goToSlide(1)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="1"></span>
+            <span onclick="goToSlide(2)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="2"></span>
+            <span onclick="goToSlide(3)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="3"></span>
+            <span onclick="goToSlide(4)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="4"></span>
+            <span onclick="goToSlide(5)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="5"></span>
+            <span onclick="goToSlide(6)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="6"></span>
+            <span onclick="goToSlide(7)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="7"></span>
+            <span onclick="goToSlide(8)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="8"></span>
+            <span onclick="goToSlide(9)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="9"></span>
+            <span onclick="goToSlide(10)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="10"></span>
+            <span onclick="goToSlide(11)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="11"></span>
+            <span onclick="goToSlide(12)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="12"></span>
+            <span onclick="goToSlide(13)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="13"></span>
+            <span onclick="goToSlide(14)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="14"></span>
+            <span onclick="goToSlide(15)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="15"></span>
+            <span onclick="goToSlide(16)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="16"></span>
+            <span onclick="goToSlide(17)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="17"></span>
+            <span onclick="goToSlide(18)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="18"></span>
+            <span onclick="goToSlide(19)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="19"></span>
+            <span onclick="goToSlide(20)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="20"></span>
+            <span onclick="goToSlide(21)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="21"></span>
+            <span onclick="goToSlide(22)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="22"></span>
+            <span onclick="goToSlide(23)"
+                class="dot w-4 h-4 rounded-full bg-white/50 border-2 border-transparent cursor-pointer transition-all"
+                data-index="23"></span>
 
         </div>
     </div>
 
     <!-- Control de música -->
     <div class="fixed bottom-8 right-8 z-50 group">
-        <button onclick="toggleMute()" class="w-20 h-20 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 text-white text-4xl flex items-center justify-center cursor-pointer shadow-2xl shadow-pink-500/50 transition-all hover:scale-110 hover:shadow-pink-500/70" id="musicBtn">
+        <button onclick="toggleMute()"
+            class="w-20 h-20 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 text-white text-4xl flex items-center justify-center cursor-pointer shadow-2xl shadow-pink-500/50 transition-all hover:scale-110 hover:shadow-pink-500/70"
+            id="musicBtn">
             <span id="musicIcon">🎵</span>
         </button>
-        <div class="absolute bottom-24 right-0 bg-white/95 px-6 py-4 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-xl flex flex-col items-center gap-2">
+        <div
+            class="absolute bottom-24 right-0 bg-white/95 px-6 py-4 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-xl flex flex-col items-center gap-2">
             <div class="text-xs text-gray-600 font-semibold" id="volumePercent">13%</div>
-            <input type="range" class="volume-slider w-48 h-2 appearance-none bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg outline-none cursor-pointer" min="0" max="100" value="13" oninput="changeVolume(this.value)">
+            <input type="range"
+                class="volume-slider w-48 h-2 appearance-none bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg outline-none cursor-pointer"
+                min="0" max="100" value="13" oninput="changeVolume(this.value)">
             <div class="flex justify-between w-full text-xs text-gray-500">
                 <span>🔇</span>
                 <span>🔊</span>
@@ -1173,15 +1529,15 @@
             slides[currentSlide].classList.add('opacity-0', 'pointer-events-none');
             dots[currentSlide].classList.remove('bg-white', 'border-orange-500', 'scale-125');
             dots[currentSlide].classList.add('bg-white/50', 'border-transparent');
-            
+
             currentSlide += direction;
-            
+
             if (currentSlide >= slides.length) {
                 currentSlide = 0;
             } else if (currentSlide < 0) {
                 currentSlide = slides.length - 1;
             }
-            
+
             slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none');
             slides[currentSlide].classList.add('opacity-100', 'pointer-events-auto');
             dots[currentSlide].classList.remove('bg-white/50', 'border-transparent');
@@ -1193,9 +1549,9 @@
             slides[currentSlide].classList.add('opacity-0', 'pointer-events-none');
             dots[currentSlide].classList.remove('bg-white', 'border-orange-500', 'scale-125');
             dots[currentSlide].classList.add('bg-white/50', 'border-transparent');
-            
+
             currentSlide = index;
-            
+
             slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none');
             slides[currentSlide].classList.add('opacity-100', 'pointer-events-auto');
             dots[currentSlide].classList.remove('bg-white/50', 'border-transparent');
@@ -1220,7 +1576,7 @@
         function toggleMute() {
             isMuted = !isMuted;
             audio.muted = isMuted;
-            
+
             if (isMuted) {
                 musicIcon.textContent = '🔇';
                 musicBtn.classList.remove('bg-gradient-to-br', 'from-pink-500', 'to-orange-500');
@@ -1267,4 +1623,5 @@
         document.head.appendChild(style);
     </script>
 </body>
+
 </html>
