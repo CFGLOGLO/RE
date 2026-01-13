@@ -63,6 +63,32 @@
         .emoji-bounce {
             animation: bounce 2s infinite;
         }
+
+        /* Estilos personalizados para la barra de scroll */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, #fef3c7, #fed7aa);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #fb923c, #f97316, #ea580c);
+            border-radius: 10px;
+            border: 2px solid #fef3c7;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #f97316, #ea580c, #c2410c);
+        }
+
+        /* Para Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #f97316 #fed7aa;
+        }
     </style>
 </head>
 
